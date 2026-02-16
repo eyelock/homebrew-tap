@@ -5,21 +5,21 @@
 class Ynh < Formula
   desc "Persona manager for AI coding assistants"
   homepage "https://github.com/eyelock/ynh"
-  version "0.0.4"
+  version "0.0.5"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.4/ynh_0.0.4_darwin_amd64.tar.gz"
-      sha256 "1c484e374380bb130a09b50042f816e22aa38abd08a2cd3df90e0333c9626a74"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_darwin_amd64.tar.gz"
+      sha256 "a9a06770ab3df4f20c5595bf8be3018bad9b1c2ded2ba24d6665e8595a3bf8a5"
 
       def install
         bin.install "ynh"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.4/ynh_0.0.4_darwin_arm64.tar.gz"
-      sha256 "cf9842d9a369b490a68c8dabbf17c379c8a94ee1b7714a2eaf6c4370764645d7"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_darwin_arm64.tar.gz"
+      sha256 "d5139f769cc0d5f175ef654c388656ab737aea5193b27a9e6f6ca39605f4b0ad"
 
       def install
         bin.install "ynh"
@@ -29,15 +29,15 @@ class Ynh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.4/ynh_0.0.4_linux_amd64.tar.gz"
-      sha256 "ce38893aa76a2d52f7211ac5e3a89540c4b7a8d95651c89fdf5d479d8b5ff89c"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_linux_amd64.tar.gz"
+      sha256 "80fa51cb8e79aa9238ef60098be993e40dd250bccf8c31375af36965f38f5c59"
       def install
         bin.install "ynh"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.4/ynh_0.0.4_linux_arm64.tar.gz"
-      sha256 "048bed2edafa97be8a6050a94305e00eca4a246fe90f6efdd265008be273b0bd"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_linux_arm64.tar.gz"
+      sha256 "7fc9d7747c931f1c4079d85f23e53edabc545b83ee332341ed3d520850c4e311"
       def install
         bin.install "ynh"
       end
