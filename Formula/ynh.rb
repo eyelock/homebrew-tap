@@ -5,46 +5,51 @@
 class Ynh < Formula
   desc "Persona manager for AI coding assistants"
   homepage "https://github.com/eyelock/ynh"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_darwin_amd64.tar.gz"
-      sha256 "a9a06770ab3df4f20c5595bf8be3018bad9b1c2ded2ba24d6665e8595a3bf8a5"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.6/ynh_0.0.6_darwin_amd64.tar.gz"
+      sha256 "8723d7ab1d5629a3e5c6cbea4d22131678b908f6eface8bb64505a46c7503d6a"
 
-      def install
+      define_method(:install) do
         bin.install "ynh"
+        bin.install "ynd"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_darwin_arm64.tar.gz"
-      sha256 "d5139f769cc0d5f175ef654c388656ab737aea5193b27a9e6f6ca39605f4b0ad"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.6/ynh_0.0.6_darwin_arm64.tar.gz"
+      sha256 "2951abb2ec9f16036b90fdc3f29fe6ee8ecf9a4c03a2547c4c321f706a7fd128"
 
-      def install
+      define_method(:install) do
         bin.install "ynh"
+        bin.install "ynd"
       end
     end
   end
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_linux_amd64.tar.gz"
-      sha256 "80fa51cb8e79aa9238ef60098be993e40dd250bccf8c31375af36965f38f5c59"
-      def install
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.6/ynh_0.0.6_linux_amd64.tar.gz"
+      sha256 "d10debc4243615b3904b63fe65f66dbc474203b810fe00800251bae9cbd566b0"
+      define_method(:install) do
         bin.install "ynh"
+        bin.install "ynd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.5/ynh_0.0.5_linux_arm64.tar.gz"
-      sha256 "7fc9d7747c931f1c4079d85f23e53edabc545b83ee332341ed3d520850c4e311"
-      def install
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.6/ynh_0.0.6_linux_arm64.tar.gz"
+      sha256 "b98987264c8c2bb968c72f7366289e6f94ea85e949db7b45a534b829519318b1"
+      define_method(:install) do
         bin.install "ynh"
+        bin.install "ynd"
       end
     end
   end
 
   test do
     system "#{bin}/ynh", "version"
+    system "#{bin}/ynd", "version"
   end
 end
