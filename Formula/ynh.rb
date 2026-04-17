@@ -5,13 +5,13 @@
 class Ynh < Formula
   desc "Harness template manager for AI coding assistants"
   homepage "https://github.com/eyelock/ynh"
-  version "0.0.13"
+  version "0.0.14"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.13/ynh_0.0.13_darwin_amd64.tar.gz"
-      sha256 "e791a31f2a865df6ad58c1bfa24de4e464a7b91c925cfc6e646adb74776d0f89"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.14/ynh_0.0.14_darwin_amd64.tar.gz"
+      sha256 "a2dfde5b00b4de7665bc66d29c7af2f25158b6abec136a641b6e3d51c5605f81"
 
       define_method(:install) do
         bin.install "ynh"
@@ -19,8 +19,8 @@ class Ynh < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.13/ynh_0.0.13_darwin_arm64.tar.gz"
-      sha256 "549facd22a4e6a23fff4a4eee4172eb43f5ff19beda160e102793365adf746c2"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.14/ynh_0.0.14_darwin_arm64.tar.gz"
+      sha256 "442bb09dd9a4963e55c47f5660ac33bb9ee741f42a1da8b356adcf075349d537"
 
       define_method(:install) do
         bin.install "ynh"
@@ -31,16 +31,16 @@ class Ynh < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.13/ynh_0.0.13_linux_amd64.tar.gz"
-      sha256 "8128ef11288416c646a24b5e36fcb5da670da551af9ce5980143f3a165c0820d"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.14/ynh_0.0.14_linux_amd64.tar.gz"
+      sha256 "3818d993d3ea8870ce5eb5bd3a27f0b11e333bd6d1532ee10c0d8d2081d7a2f5"
       define_method(:install) do
         bin.install "ynh"
         bin.install "ynd"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynh/releases/download/v0.0.13/ynh_0.0.13_linux_arm64.tar.gz"
-      sha256 "3caab15d95917d2cf2a8c375b7ad5a8b4e9a8fd3081cd8682d9ea980100def16"
+      url "https://github.com/eyelock/ynh/releases/download/v0.0.14/ynh_0.0.14_linux_arm64.tar.gz"
+      sha256 "5b421e76f55ac2b937e5109f42dc28e481bc39a96329ca5471b2607ca7165dad"
       define_method(:install) do
         bin.install "ynh"
         bin.install "ynd"
