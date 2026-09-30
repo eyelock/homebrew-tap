@@ -5,21 +5,53 @@
 class Ynm < Formula
   desc "Your named memory: agent memory in git notes over MCP and CLI"
   homepage "https://github.com/eyelock/ynm"
-  url "https://github.com/eyelock/ynm/releases/download/v0.1.0/ynm-0.1.0.tar.gz"
-  sha256 "a31e6c365c53d27b4cbf65bb8b05df92a5bcb41d740d482892c2252fc921bfd8"
-  version "0.1.0"
+  version "0.1.1"
   license "MIT"
 
   depends_on "git"
-  depends_on "node"
 
-  def install
-    libexec.install Dir["*"]
-    (bin/"ynm").write_env_script libexec/"bin/run.js", PATH: "#{Formula["node"].opt_bin}:$PATH"
+  conflicts_with "ynm-slim", because: "both install a `ynm` executable"
+
+  on_macos do
+    if Hardware::CPU.intel?
+      url "https://github.com/eyelock/ynm/releases/download/v0.1.1/ynm_0.1.1_darwin_amd64.tar.gz"
+      sha256 "9383ede7f35fd15ba90e5d668b724647ece4c47aa92d3182e65a8587a49ae850"
+
+      define_method(:install) do
+        bin.install "ynm"
+      end
+    end
+    if Hardware::CPU.arm?
+      url "https://github.com/eyelock/ynm/releases/download/v0.1.1/ynm_0.1.1_darwin_arm64.tar.gz"
+      sha256 "de07dca2d1f84d10ce31a3a90bd93ab06124324ee639a6f732e25e0cb352ade2"
+
+      define_method(:install) do
+        bin.install "ynm"
+      end
+    end
+  end
+
+  on_linux do
+    if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
+      url "https://github.com/eyelock/ynm/releases/download/v0.1.1/ynm_0.1.1_linux_amd64.tar.gz"
+      sha256 "1bab42f88289746f2cd1093a78e5d0d6840b2e74fef7413d94a00d7ff1479b28"
+
+      define_method(:install) do
+        bin.install "ynm"
+      end
+    end
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/eyelock/ynm/releases/download/v0.1.1/ynm_0.1.1_linux_arm64.tar.gz"
+      sha256 "5718feafae2fa38a6b6aea3961fe788612023191fcc7dc9e1b9c07d041a5aaf2"
+
+      define_method(:install) do
+        bin.install "ynm"
+      end
+    end
   end
 
   test do
-    assert_match "@ynm/cli", shell_output("#{bin}/ynm --version")
+    assert_match "@ynm/cli/#{version}", shell_output("#{bin}/ynm --version")
     system "#{bin}/ynm", "serve", "--help"
   end
 end
