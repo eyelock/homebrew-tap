@@ -5,29 +5,29 @@
 class Ynr < Formula
   desc "Your named reporting: the observation plane for the ynh, ynm and ynf factory"
   homepage "https://github.com/eyelock/ynr"
-  version "0.1.1"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynr/releases/download/v0.1.1/ynr_0.1.1_darwin_amd64.tar.gz",
+      url "https://github.com/eyelock/ynr/releases/download/v0.2.0/ynr_0.2.0_darwin_amd64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "23d95b422d4856e53a20aeb04781a60c8e0ec26c4846a65ff098b59e90742a79"
+      sha256 "64c56779d1787c98df9b37dedee342e1b7c868c344c310a17ef88f656e78e58a"
 
       define_method(:install) do
         bin.install "ynr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynr/releases/download/v0.1.1/ynr_0.1.1_darwin_arm64.tar.gz",
+      url "https://github.com/eyelock/ynr/releases/download/v0.2.0/ynr_0.2.0_darwin_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "ac73e2b983d5bd4430d285e5c19544fc38b5195f9fcd79f1193427d4760bc679"
+      sha256 "3b12facee98079ea163531867b7ad93ba40b340199fedf1061fcd8d4b09164a4"
 
       define_method(:install) do
         bin.install "ynr"
@@ -37,23 +37,23 @@ class Ynr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynr/releases/download/v0.1.1/ynr_0.1.1_linux_amd64.tar.gz",
+      url "https://github.com/eyelock/ynr/releases/download/v0.2.0/ynr_0.2.0_linux_amd64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "f696514892c437a99051aca0081104fa82e60d8651f943d88ed8a06e76ab9da5"
+      sha256 "b3883ffe33b512b483312b061e2e403655f9c380681f286eac9e337f30d22533"
       define_method(:install) do
         bin.install "ynr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynr/releases/download/v0.1.1/ynr_0.1.1_linux_arm64.tar.gz",
+      url "https://github.com/eyelock/ynr/releases/download/v0.2.0/ynr_0.2.0_linux_arm64.tar.gz",
         headers: [
           "Accept: application/octet-stream",
           "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
         ]
-      sha256 "9b8e55430d23928e99eec10243bb653689e496e36777db58d6c3b3e3b81bd790"
+      sha256 "5189a8239188cb32a957d2741df5081c792c4e865dc4d103df57592930902534"
       define_method(:install) do
         bin.install "ynr"
       end
