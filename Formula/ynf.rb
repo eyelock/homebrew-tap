@@ -5,17 +5,13 @@
 class Ynf < Formula
   desc "Your named factory: the event-driven outer loop around agent runs"
   homepage "https://github.com/eyelock/ynf"
-  version "0.1.0"
+  version "0.2.0"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynf/releases/download/v0.1.0/ynf_0.1.0_darwin_amd64.tar.gz",
-        headers: [
-          "Accept: application/octet-stream",
-          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
-        ]
-      sha256 "9c51c5f9d23b06d0028f659afebd2649695afc61eb2a3d6c896763ffff753aee"
+      url "https://github.com/eyelock/ynf/releases/download/v0.2.0/ynf_0.2.0_darwin_amd64.tar.gz"
+      sha256 "9ec94ed67d488130c8fdb022e56c36b880b319346f30895c66373854dc0e3054"
 
       define_method(:install) do
         bin.install "ynf"
@@ -23,12 +19,8 @@ class Ynf < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynf/releases/download/v0.1.0/ynf_0.1.0_darwin_arm64.tar.gz",
-        headers: [
-          "Accept: application/octet-stream",
-          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
-        ]
-      sha256 "32943ca20683ce9a1baaa01829e73e0368fa37aa94414fc7e06b85d97202a292"
+      url "https://github.com/eyelock/ynf/releases/download/v0.2.0/ynf_0.2.0_darwin_arm64.tar.gz"
+      sha256 "82bfd387a250c67fb27c4759c5d3e6676fbc4e529027fd84668f666f39352f8b"
 
       define_method(:install) do
         bin.install "ynf"
@@ -39,24 +31,16 @@ class Ynf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynf/releases/download/v0.1.0/ynf_0.1.0_linux_amd64.tar.gz",
-        headers: [
-          "Accept: application/octet-stream",
-          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
-        ]
-      sha256 "362038451c63ec32e8d00ee813d5759aca43b046f393e97dc3ed90c60caf4af8"
+      url "https://github.com/eyelock/ynf/releases/download/v0.2.0/ynf_0.2.0_linux_amd64.tar.gz"
+      sha256 "f7d3225403ff39b1562a7c94166914afe1e4439b978db05a24acc79486558048"
       define_method(:install) do
         bin.install "ynf"
         libexec.install Dir["libexec/*"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynf/releases/download/v0.1.0/ynf_0.1.0_linux_arm64.tar.gz",
-        headers: [
-          "Accept: application/octet-stream",
-          "Authorization: bearer #{ENV["HOMEBREW_GITHUB_API_TOKEN"]}"
-        ]
-      sha256 "5960d56a45f006c93663a0e7efd34a0a42a82c106a1ee4ab7fa99646516ce1e5"
+      url "https://github.com/eyelock/ynf/releases/download/v0.2.0/ynf_0.2.0_linux_arm64.tar.gz"
+      sha256 "162a1d3e801439bcfa1dfc07dd196c6ea42ecdbaf40004c4fed3185586ebc023"
       define_method(:install) do
         bin.install "ynf"
         libexec.install Dir["libexec/*"]
