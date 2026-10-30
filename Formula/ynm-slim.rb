@@ -5,9 +5,9 @@
 class YnmSlim < Formula
   desc "Your named memory: agent memory in git notes over MCP and CLI"
   homepage "https://github.com/eyelock/ynm"
-  url "https://github.com/eyelock/ynm/releases/download/v0.4.2/ynm_0.4.2_slim.tar.gz"
-  sha256 "6e2d791ee908306abf6289912da0381d142131efae29328164834d0f03df7aff"
-  version "0.4.2"
+  url "https://github.com/eyelock/ynm/releases/download/v0.5.0/ynm_0.5.0_slim.tar.gz"
+  sha256 "10b29ba4b24c2a1088d7c91d6c9d630c9c8071ea9335082090ea01dfd5e1f809"
+  version "0.5.0"
   license "MIT"
 
   depends_on "git"
