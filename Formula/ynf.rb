@@ -5,13 +5,13 @@
 class Ynf < Formula
   desc "Your named factory: the event-driven outer loop around agent runs"
   homepage "https://github.com/eyelock/ynf"
-  version "0.4.0"
+  version "0.4.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynf/releases/download/v0.4.0/ynf_0.4.0_darwin_amd64.tar.gz"
-      sha256 "2146aabca6693a395883cd158df8d331ba72b795e6fea050183b25a01b146b3c"
+      url "https://github.com/eyelock/ynf/releases/download/v0.4.1/ynf_0.4.1_darwin_amd64.tar.gz"
+      sha256 "675b1b720c70f440b88c198bceb29021085d2bf58821d82d0ba2024ddcd5f64b"
 
       define_method(:install) do
         bin.install "ynf"
@@ -19,8 +19,8 @@ class Ynf < Formula
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynf/releases/download/v0.4.0/ynf_0.4.0_darwin_arm64.tar.gz"
-      sha256 "51a4a3e521caddc2d3b27cd4a52d8c669c5a1e416219c6cc749c4eb9cd213899"
+      url "https://github.com/eyelock/ynf/releases/download/v0.4.1/ynf_0.4.1_darwin_arm64.tar.gz"
+      sha256 "96705e47c397f80e94af29e03df86215752bb101d86b7ef32b7a1df5640ca39a"
 
       define_method(:install) do
         bin.install "ynf"
@@ -31,16 +31,16 @@ class Ynf < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynf/releases/download/v0.4.0/ynf_0.4.0_linux_amd64.tar.gz"
-      sha256 "10266f9beee6c0e81f8900bb7d26393e0ed445aeee0d9373991c3c6175c07719"
+      url "https://github.com/eyelock/ynf/releases/download/v0.4.1/ynf_0.4.1_linux_amd64.tar.gz"
+      sha256 "aa141a07f25880160ac433d8918f5b1096037a461ff26e41ae94953b8c8c2a75"
       define_method(:install) do
         bin.install "ynf"
         libexec.install Dir["libexec/*"]
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynf/releases/download/v0.4.0/ynf_0.4.0_linux_arm64.tar.gz"
-      sha256 "2dfe1f2599060b516db4eb9eff5f2726bd3a78b573db5141001b92fa72520225"
+      url "https://github.com/eyelock/ynf/releases/download/v0.4.1/ynf_0.4.1_linux_arm64.tar.gz"
+      sha256 "b6310e4976f7269a96e051112bb07b634227058ffba67b8cb61968e419d035c9"
       define_method(:install) do
         bin.install "ynf"
         libexec.install Dir["libexec/*"]
