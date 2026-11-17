@@ -21,4 +21,9 @@ for p in github_repository.tap github_branch_default.main github_issue_labels.ta
 terraform plan   # expected: No changes.
 ```
 
+Until this change is applied by a human, the plan is not clean. Under the decision that every YN repository
+declares both `merge:` labels (ynw-nym0k), `labels.tf` adds `merge: merge commit` (not yet live) and aligns the
+live `merge: squash` (colour 5319e7, no description) to the shared shape (2ea44f, "Squash merge"). The expected
+plan is therefore one change, to `github_issue_labels.tap`, and nothing else.
+
 `terraform.tfstate*`, `.terraform/` and `*.tfvars` are gitignored.
