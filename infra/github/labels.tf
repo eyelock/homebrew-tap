@@ -1,5 +1,5 @@
-# Authoritative: a label created in the UI and not listed here is removed on apply. These are
-# GitHub's defaults, as they are live.
+# Authoritative: a label created in the UI and not listed here is removed on apply. GitHub's defaults, plus the
+# `merge: squash` label Hannett's review created (without a description).
 locals {
   labels = {
     "bug"              = { color = "d73a4a", description = "Something isn't working" }
@@ -9,6 +9,7 @@ locals {
     "good first issue" = { color = "7057ff", description = "Good for newcomers" }
     "help wanted"      = { color = "008672", description = "Extra attention is needed" }
     "invalid"          = { color = "e4e669", description = "This doesn't seem right" }
+    "merge: squash"    = { color = "5319e7", description = "" }
     "question"         = { color = "d876e3", description = "Further information is requested" }
     "wontfix"          = { color = "ffffff", description = "This will not be worked on" }
   }
