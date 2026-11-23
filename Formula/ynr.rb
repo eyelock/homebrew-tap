@@ -5,21 +5,21 @@
 class Ynr < Formula
   desc "Your named reporting: the observation plane for the ynh, ynm and ynf factory"
   homepage "https://github.com/eyelock/ynr"
-  version "0.5.0"
+  version "0.5.1"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynr/releases/download/v0.5.0/ynr-full_0.5.0_darwin_amd64.tar.gz"
-      sha256 "fda16e4ebef0c61f3187ae7f6e8ddf2b449282bda2aac6fec24967ecb04e9021"
+      url "https://github.com/eyelock/ynr/releases/download/v0.5.1/ynr-full_0.5.1_darwin_amd64.tar.gz"
+      sha256 "11a1f4efae7ea1bccd5efc52be0d17e2c94b063f467df6dddf0d35773d7b2870"
 
       define_method(:install) do
         bin.install "ynr"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynr/releases/download/v0.5.0/ynr-full_0.5.0_darwin_arm64.tar.gz"
-      sha256 "da9d77d93c75a068bb56cfa3c28be458b11f25423870bfef27dcd086ffc3a9fe"
+      url "https://github.com/eyelock/ynr/releases/download/v0.5.1/ynr-full_0.5.1_darwin_arm64.tar.gz"
+      sha256 "5356cdb14e0985918054c96e6a68ac579170b0b87e741f39d70da0ea12bab51b"
 
       define_method(:install) do
         bin.install "ynr"
@@ -29,15 +29,15 @@ class Ynr < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynr/releases/download/v0.5.0/ynr-full_0.5.0_linux_amd64.tar.gz"
-      sha256 "b9aca76ad1e0c1e9c16fc15490106633fa1dd12c68d99e310c2ce7018dfac5a1"
+      url "https://github.com/eyelock/ynr/releases/download/v0.5.1/ynr-full_0.5.1_linux_amd64.tar.gz"
+      sha256 "d5d2024f73a40f2942db2d24439115628a9f69b49bf7d3d5d2dd9accae3befd1"
       define_method(:install) do
         bin.install "ynr"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynr/releases/download/v0.5.0/ynr-full_0.5.0_linux_arm64.tar.gz"
-      sha256 "eb5b94553a99143a9d9768f1ae8df141a63b26ca72e1019af40aba1b034db142"
+      url "https://github.com/eyelock/ynr/releases/download/v0.5.1/ynr-full_0.5.1_linux_arm64.tar.gz"
+      sha256 "e34bc75882a59195f156b95b0aeb71ad6c502f47d370cfa8b8309429f8502a6e"
       define_method(:install) do
         bin.install "ynr"
       end
