@@ -5,7 +5,7 @@
 class Ynm < Formula
   desc "Your named memory: agent memory in git notes over MCP and CLI"
   homepage "https://github.com/eyelock/ynm"
-  version "0.6.1"
+  version "0.6.2"
   license "MIT"
 
   depends_on "git"
@@ -14,16 +14,16 @@ class Ynm < Formula
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/eyelock/ynm/releases/download/v0.6.1/ynm_0.6.1_darwin_amd64.tar.gz"
-      sha256 "b521daee0bdef8919ad95ec03fbc4922761a78e196650e6f7b215f66c06ef9ee"
+      url "https://github.com/eyelock/ynm/releases/download/v0.6.2/ynm_0.6.2_darwin_amd64.tar.gz"
+      sha256 "02a7e7ee43a5e2224b58e2b353b756ad150387df9b5958b03f920fc33f3ec789"
 
       define_method(:install) do
         bin.install "ynm"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/eyelock/ynm/releases/download/v0.6.1/ynm_0.6.1_darwin_arm64.tar.gz"
-      sha256 "b9758ce6b92d2fe39c9bd083f7b275021c8e57a2904ea39690b84a990fdf3e3b"
+      url "https://github.com/eyelock/ynm/releases/download/v0.6.2/ynm_0.6.2_darwin_arm64.tar.gz"
+      sha256 "b33e7126b8f9a9456c7a94a5cc37c55657990dd75e6eeb42b80b43b9984cb788"
 
       define_method(:install) do
         bin.install "ynm"
@@ -33,16 +33,16 @@ class Ynm < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynm/releases/download/v0.6.1/ynm_0.6.1_linux_amd64.tar.gz"
-      sha256 "f223bfed6decb71c424533a863d490bf19cc02adf044f86773e9ef0c56b70999"
+      url "https://github.com/eyelock/ynm/releases/download/v0.6.2/ynm_0.6.2_linux_amd64.tar.gz"
+      sha256 "ba6a4f244cc5179ad1f98f081a701647a3f3e0c659bf63d0cc748fa7c988fef1"
 
       define_method(:install) do
         bin.install "ynm"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/eyelock/ynm/releases/download/v0.6.1/ynm_0.6.1_linux_arm64.tar.gz"
-      sha256 "913b6df8c483e33c5d9da29faf0f7dfe5e407ca9dc989e0409f16aaa405a0ae0"
+      url "https://github.com/eyelock/ynm/releases/download/v0.6.2/ynm_0.6.2_linux_arm64.tar.gz"
+      sha256 "53013f260c776d0e931f3e5d1465049cebeb19fdb67ce8c02f9dc643de3ef5ef"
 
       define_method(:install) do
         bin.install "ynm"
